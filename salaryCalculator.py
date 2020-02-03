@@ -5,7 +5,7 @@ import os
 #constants
 '''
 number_of_days = 365
-number_of_months = 12
+number_of_four_weeks = 13
 number_of_weeks = 52
 number_of_weeks_in_a_month = 4
 hours_per_week = 40
@@ -57,14 +57,14 @@ while(program_Start):
         #hourly is given
         if selection == 1:
             annual_salary = compute_salary_annual(salary)
-            monthly_salary = annual_salary / number_of_months
+            monthly_salary = annual_salary / number_of_four_weeks
             weekly_salary = monthly_salary / number_of_weeks_in_a_month
             display_output(salary, weekly_salary, monthly_salary, annual_salary)
 
         #annual is given
         elif selection == 2:
             hourly_salary = compute_salary_hourly(salary)
-            monthly_salary = salary / number_of_months
+            monthly_salary = salary / number_of_four_weeks
             weekly_salary = monthly_salary / number_of_weeks_in_a_month
             display_output(hourly_salary, weekly_salary, monthly_salary, salary)
 
@@ -72,7 +72,7 @@ while(program_Start):
         elif selection == 3:
             hourly_salary = salary / hours_per_week
             annual_salary = compute_salary_annual(hourly_salary)
-            monthly_salary = annual_salary / number_of_months
+            monthly_salary = annual_salary / number_of_four_weeks
             display_output(hourly_salary, salary, monthly_salary, annual_salary)
 
     else:
